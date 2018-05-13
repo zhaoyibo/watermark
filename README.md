@@ -1,10 +1,10 @@
-# watermark
+# Watermark your ID photo
 
-> A Vue.js project
+> Provide watermarking to documents and ID photos to ensure that the document information is safe and not leaked. Completely implemented locally, no information is uploaded to the server
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
