@@ -2,24 +2,27 @@
 
 > Provide watermarking to documents and ID photos to ensure that the document information is safe and not leaked. Completely implemented locally, no information is uploaded to the server
 
-[preview](https://windmt.com/tools/watermark/)
+[preview](https://haoyizebo.com/tools/watermark/)
 
 ## Build Setup
 
 ```bash
-# install dependencies
+# Project setup
 yarn
 
-# serve with hot reload at localhost:8080
+# Compiles and hot-reloads for development
 yarn dev
 
-# build for production with minification
+# Compiles and minifies for production
 yarn build
+
+# Lints and fixes files
+yarn lint
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+NOTE: You may need to change `assetsDir` in `vue.config.js`
 
-> NOTE: You may need to change `assetsPublicPath` in `config/index.js`
+Customize configuration, check out [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Unsplash
 

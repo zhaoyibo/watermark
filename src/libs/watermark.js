@@ -14,12 +14,13 @@ export default function Watermark() {
       height: 500,
       imgUrl: '',
       id: '',
-      parent: null
+      parent: null,
+      xShift:0,
     },
     Parent = null,
     Context = null,
     textWidth = -1,
-    textHeight = -1
+    textHeight = -1;
   function mark(userConfig) {
     userConfig = userConfig || {}
     Config = extend(Config, userConfig)
@@ -60,9 +61,16 @@ export default function Watermark() {
       overHeight = textHeight + ySpace,
       overWidth = textWidth + xSpace,
       squareWidth = 0.72 * (Config.width + Config.height)
+    var i = 0
+    var textTotal = Config.size * Config.text.length + Config.xSpace
     for (var y = Config.yStart; y < squareWidth + overHeight; y += ySpace + textHeight) {
-      for (var x = Config.xStart; x < squareWidth + overWidth; x += xSpace + textWidth) {
-        createMark(x, y)
+      i ++;
+      for (var x = -textTotal; x < squareWidth + overWidth; x += xSpace + textWidth) {
+        if( i % 2 == 0){
+            createMark(x + textTotal / 2, y);
+        } else{
+            createMark(x, y);
+        }
       }
     }
   }

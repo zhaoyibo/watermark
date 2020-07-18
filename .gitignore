@@ -179,3 +179,5 @@ GitHub.sublime-settings
 
 /dist/
 /config/secrect.env.js
+
+*.iml
